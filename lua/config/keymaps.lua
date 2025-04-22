@@ -29,15 +29,15 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 -- Leader d to delete in void register
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
-vim.keymap.set("n", "<leader>bod", "<CMD>%bd|e#|bd#<CR>", { desc = "Delete All Other Buffers except current" })
+vim.keymap.set("n", "<leader>bod", "<CMD>%bd|e#|bd#|e<CR>", { desc = "Delete All Other Buffers except current" })
 
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
-vim.keymap.set({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
-vim.keymap.set({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
-vim.keymap.set({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
-vim.keymap.set({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
-vim.keymap.set({ "n", "t" }, "<C-p>", "<CMD>NavigatorPrevious<CR>")
+-- vim.keymap.set({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
+-- vim.keymap.set({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
+-- vim.keymap.set({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
+-- vim.keymap.set({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
+-- vim.keymap.set({ "n", "t" }, "<C-p>", "<CMD>NavigatorPrevious<CR>")
 
 -- That mythical method to run a single fucking unit test in both HappierTrails and BrazilGradle
 -- tbh bunch of spaghetti code but who cares haha
