@@ -40,5 +40,26 @@ return {
         },
       },
     },
+    picker = {
+      exclude = {
+        ".git/",
+        "node_modules/",
+        "target/",
+        "__pycache__/",
+        ".pytest_cache/",
+        "build/",
+        ".bemol/",
+        ".brazil/",
+        "release-info/",
+        "env/",
+        ".settings/",
+        "logs/",
+        "versionSets/",
+        ".ignore",
+        "packageInfo",
+        "packageInfo.bak",
+        ".gradle",
+      },
+    }
   },
 }
