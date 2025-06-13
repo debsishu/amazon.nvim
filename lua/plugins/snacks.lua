@@ -1,24 +1,16 @@
 return {
   "folke/snacks.nvim",
   keys = {
-    {
-      "<leader>.",
-      function()
-        Snacks.scratch()
-      end,
-      desc = "Toggle Scratch Buffer",
-    },
-    {
-      "<leader>S",
-      function()
-        Snacks.scratch.select()
-      end,
-      desc = "Select Scratch Buffer",
-    },
+    { "<leader>.", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer", },
+    { "<leader>S", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer", },
+    { "<leader>bd",  function() Snacks.bufDelete() end, desc = "Delete/Close Current Buffer" },
+    { "<leader>bod",  function() Snacks.bufdelete.other() end, desc = "Delete/Close All Other Buffers Except the Current" },
   },
   opts = {
-    scratch = {},
+    scratch = { enabled = true },
+    bufdelete = { enabled = true },
     scroll = { enabled = false },
+    picker = { enabled = false },
     dashboard = {
       preset = {
         header = [[
@@ -32,7 +24,6 @@ return {
           { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
           { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
           { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-          -- { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
           { icon = " ", key = "s", desc = "Restore Session", section = "session" },
           { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
@@ -40,26 +31,5 @@ return {
         },
       },
     },
-    picker = {
-      exclude = {
-        ".git/",
-        "node_modules/",
-        "target/",
-        "__pycache__/",
-        ".pytest_cache/",
-        "build/",
-        ".bemol/",
-        ".brazil/",
-        "release-info/",
-        "env/",
-        ".settings/",
-        "logs/",
-        "versionSets/",
-        ".ignore",
-        "packageInfo",
-        "packageInfo.bak",
-        ".gradle",
-      },
-    }
   },
 }
