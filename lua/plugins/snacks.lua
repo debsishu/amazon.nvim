@@ -3,8 +3,6 @@ return {
   keys = {
     { "<leader>.", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer", },
     { "<leader>S", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer", },
-    { "<leader>bd",  function() Snacks.bufDelete() end, desc = "Delete/Close Current Buffer" },
-    { "<leader>bod",  function() Snacks.bufdelete.other() end, desc = "Delete/Close All Other Buffers Except the Current" },
   },
   opts = {
     scratch = { enabled = true },
