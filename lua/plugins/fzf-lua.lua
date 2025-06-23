@@ -7,8 +7,8 @@ return {
       width = 0.95,
       preview = {
         layout = "flex",
-        vertical = "down:50%",
-        horizontal = "right:50%",
+        vertical = "down:60%",
+        horizontal = "right:60%",
       },
     },
     fzf_opts = {
@@ -59,6 +59,8 @@ return {
         "packageInfo.bak",
         "--exclude",
         ".gradle",
+        "--exclude",
+        ".idea/",
       }, " "),
       formatter = "path.filename_first",
     },
@@ -87,6 +89,7 @@ return {
         "--glob=!**/.settings/*",
         "--glob=!**/logs/*",
         "--glob=!**/versionSets/*",
+        "--glob=!**/.idea/*",
         "--glob=!**/.ignore",
         "--glob=!**/packageInfo",
         "--glob=!**/packageInfo.bak",
