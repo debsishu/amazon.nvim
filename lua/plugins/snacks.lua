@@ -6,7 +6,6 @@ return {
   },
   opts = {
     scratch = { enabled = true },
-    bufdelete = { enabled = true },
     scroll = { enabled = false },
     picker = { enabled = false },
     dashboard = {
